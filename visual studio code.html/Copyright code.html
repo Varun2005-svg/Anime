@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeZone - Copyright</title>
+    <style>
+  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #16213e;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .copyright-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .copyright-text {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .copyright-info {
+            font-size: 0.9rem;
+            color: #a4a4a4;
+            line-height: 1.6;
+        }
+
+        .anime-icon {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #e94560;
+        }
+
+        /* Animation keyframes */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #e94560;
+            }
+            50% {
+                text-shadow: 0 0 20px #e94560, 0 0 30px #e94560;
+            }
+            100% {
+                text-shadow: 0 0 5px #e94560;
+            }
+        }
+
+        /* Links styling */
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #a4a4a4;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #e94560;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .copyright-text {
+                font-size: 0.9rem;
+            }
+            .copyright-info {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="copyright-container">
+            <div class="anime-icon">⭐</div>
+            <div class="copyright-text">AnimeZone</div>
+            <div class="copyright-info">
+                <p>© <span id="current-year"></span> AnimeZone™. All Rights Reserved.</p>
+                <p>This website and its content is protected by international copyright laws.</p>
+                <p>Unauthorized use or reproduction of this material without express written consent is prohibited.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#dmca">DMCA</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update the copyright year automatically
+        function updateCopyrightYear() {
+            const yearElement = document.getElementById('current-year');
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = currentYear;
+        }
+
+        // Initialize the year when the page loads
+        document.addEventListener('DOMContentLoaded', updateCopyrightYear);
+
+        // Easter egg animation for the anime icon
+        const animeIcon = document.querySelector('.anime-icon');
+        const icons = ['⭐', '🌟', '✨', '💫'];
+        let iconIndex = 0;
+
+        animeIcon.addEventListener('click', () => {
+            iconIndex = (iconIndex + 1) % icons.length;
+            animeIcon.textContent = icons[iconIndex];
+            animeIcon.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                animeIcon.style.transform = 'scale(1)';
+            }, 200);
+        });
+    </script>
+</body>
+</html>

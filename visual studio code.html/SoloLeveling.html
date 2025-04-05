@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeZone - Watch SoloLeveling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .header {
+            background-color: #2c2c2c;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            color: #ff6b6b;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            background-color: #000;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .episode-info {
+            background-color: #2c2c2c;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .episode-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+
+        .episode-description {
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        .episode-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .episode-button {
+            background-color: #2c2c2c;
+            border: none;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .episode-button:hover {
+            background-color: #ff6b6b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .episode-list {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">AnimeZone</div>
+    </header>
+
+    <div class="container">
+        <h1>SoloLeveling</h1>
+        <div class="video-container">
+            <video controls>
+                <source src="[SO] [12 - Solo Leveling] [1080p] [Dual].mp4.mkv" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-info">
+            <h2>Episode Information</h2>
+            <p>Episode Title: [SoloLeveling]</p>
+            <p>Episode Number: [S01:EPno: 12]</p>
+            <div class="container">
+                <div class="controls">
+                    <button onclick="document.querySelector('video').play()">Play</button>
+                    <button onclick="document.querySelector('video').pause()">Pause</button>
+                    <button onclick="document.querySelector('video').currentTime=0">Restart</button>
+                </div>
+            </div>
+        </div>
+                <header class="header">
+                    <div class="logo">AnimeZone</div>
+                </header>
+            
+        <div class="container">
+                <h1>SoloLeveling</h1>
+                <div class="video-container">
+            <video controls>
+                <source src="c:\Users\dell\Downloads\Telegram Desktop\[SO] [03 - Solo Leveling] [1080p] [Dual].mkv" type="video/mp4">
+                </video>
+
+            <div class="video-info">
+                <h2>Episode Information</h2>
+                <p>Episode Title: [SoloLeveling]</p>
+                <p>Episode Number:[S01:EPno: 11]</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="document.querySelector('video').play()">Play</button>
+            <button onclick="document.querySelector('video').pause()">Pause</button>
+            <button onclick="document.querySelector('video').currentTime=0">Restart</button>
+            <button onclick="document.querySelector('video').currentTime -= 10">Rewind 10s</button>
+            <button onclick="document.querySelector('video').currentTime += 10">Forward 10s</button>
+            <button onclick="document.querySelector('video').volume -= 0.1">Volume Down</button> 
+        </div>   
+        
+        <div class="episode-list">
+            <button oneclick="episode-button">Episode 1</button>
+            <button class="episode-button">Episode 2</button>
+            <button class="episode-button">Episode 3</button>
+            <button class="episode-button">Episode 4</button>
+            <button class="episode-button">Episode 5</button>
+            <button class="episode-button">Episode 6</button>
+            <button class="episode-button">Episode 7</button>
+            <button class="episode-button">Episode 8</button>
+            <button class="episode-button">Episode 9</button>
+            <button class="episode-button">Episode 10</button>
+            <button oneclick="episode-button">Episode 11</button>
+            <button class="episode-button">Episode 12</button>
+        </div>
+    </div>
+</body>
+</html>
